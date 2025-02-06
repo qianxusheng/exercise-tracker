@@ -1,0 +1,8 @@
+{
+  "name": "ExerciseTracker",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "5e9dcac3"
+}
