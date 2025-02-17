@@ -21,6 +21,11 @@ public class UserController {
         return userService.getOrCreateUser(username, deviceUuid);
     }
 
+    @PostMapping("/register")
+    public User registerUser(@RequestParam String username, @RequestParam String deviceUuid) {
+        return userService.getOrCreateUser(username, deviceUuid);
+    }
+
     @GetMapping("/info/{username}")
     public ResponseEntity<?> getUserByUsername(@PathVariable String username) {
         Optional<User> user = userService.getUserByUsername(username);

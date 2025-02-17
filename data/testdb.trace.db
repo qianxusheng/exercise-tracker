@@ -1,0 +1,307 @@
+2025-02-17 13:37:26.335081-05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Cannot truncate "PUBLIC.USERS"; SQL statement:
+TRUNCATE TABLE users RESTART IDENTITY [90106-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.TruncateTable.update(TruncateTable.java:42)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1344)
+	at org.h2.server.web.WebApp.query(WebApp.java:1142)
+	at org.h2.server.web.WebApp.query(WebApp.java:1118)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-02-17 13:37:43.220135-05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Cannot truncate "PUBLIC.USERS"; SQL statement:
+TRUNCATE TABLE users [90106-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.TruncateTable.update(TruncateTable.java:42)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1344)
+	at org.h2.server.web.WebApp.query(WebApp.java:1142)
+	at org.h2.server.web.WebApp.query(WebApp.java:1118)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-02-17 13:38:25.199492-05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Cannot truncate "PUBLIC.USERS"; SQL statement:
+TRUNCATE TABLE users RESTART IDENTITY [90106-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.TruncateTable.update(TruncateTable.java:42)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1344)
+	at org.h2.server.web.WebApp.query(WebApp.java:1142)
+	at org.h2.server.web.WebApp.query(WebApp.java:1118)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-02-17 13:46:30.616204-05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]ININSERT INTO exercise_data (ID, DURATION, EXERCISE_TYPE, LOCATION, REPORT_TIME, USER_ID) VALUES\000d\000a(1, 30, 'Running', 'outside', '2025-02-15T08:00:00Z', 1),  -- Day 1\000d\000a(2, 45, 'Cycling', 'inside', '2025-02-14T08:00:00Z', 1),  -- Day 2\000d\000a(3, 60, 'Yoga', 'inside', '2025-02-13T08:00:00Z', 1),     -- Day 3\000d\000a(4, 40, 'Running', 'outside', '2025-02-12T08:00:00Z', 1),  -- Day 4\000d\000a(5, 50, 'Walking', 'outside', '2025-02-11T08:00:00Z', 1),  -- Day 5\000d\000a(6, 30, 'Cycling', 'inside', '2025-02-10T08:00:00Z', 1),  -- Day 6\000d\000a(7, 60, 'Yoga', 'inside', '2025-02-09T08:00:00Z', 1),     -- Day 7\000d\000a(8, 45, 'Running', 'outside', '2025-02-08T08:00:00Z', 1),  -- Day 8\000d\000a(9, 50, 'Cycling', 'outside', '2025-02-07T08:00:00Z', 1),  -- Day 9\000d\000a(10, 35, 'Walking', 'inside', '2025-02-06T08:00:00Z', 1),  -- Day 10\000d\000a(11, 40, 'Running', 'outside', '2025-02-05T08:00:00Z', 1), -- Day 11\000d\000a(12, 55, 'Yoga', 'inside', '2025-02-04T08:00:00Z', 1),    -- Day 12\000d\000a(13, 30, 'Cycling', 'outside', '2025-02-03T08:00:00Z', 1), -- Day 13\000d\000a(14, 45, 'Walking', 'inside', '2025-02-02T08:00:00Z', 1)"; expected "INSERT"; SQL statement:
+ININSERT INTO exercise_data (ID, DURATION, EXERCISE_TYPE, LOCATION, REPORT_TIME, USER_ID) VALUES
+(1, 30, 'Running', 'outside', '2025-02-15T08:00:00Z', 1),  -- Day 1
+(2, 45, 'Cycling', 'inside', '2025-02-14T08:00:00Z', 1),  -- Day 2
+(3, 60, 'Yoga', 'inside', '2025-02-13T08:00:00Z', 1),     -- Day 3
+(4, 40, 'Running', 'outside', '2025-02-12T08:00:00Z', 1),  -- Day 4
+(5, 50, 'Walking', 'outside', '2025-02-11T08:00:00Z', 1),  -- Day 5
+(6, 30, 'Cycling', 'inside', '2025-02-10T08:00:00Z', 1),  -- Day 6
+(7, 60, 'Yoga', 'inside', '2025-02-09T08:00:00Z', 1),     -- Day 7
+(8, 45, 'Running', 'outside', '2025-02-08T08:00:00Z', 1),  -- Day 8
+(9, 50, 'Cycling', 'outside', '2025-02-07T08:00:00Z', 1),  -- Day 9
+(10, 35, 'Walking', 'inside', '2025-02-06T08:00:00Z', 1),  -- Day 10
+(11, 40, 'Running', 'outside', '2025-02-05T08:00:00Z', 1), -- Day 11
+(12, 55, 'Yoga', 'inside', '2025-02-04T08:00:00Z', 1),    -- Day 12
+(13, 30, 'Cycling', 'outside', '2025-02-03T08:00:00Z', 1), -- Day 13
+(14, 45, 'Walking', 'inside', '2025-02-02T08:00:00Z', 1) [42001-232]
+2025-02-17 13:46:33.317753-05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]ININSERT INTO exercise_data (ID, DURATION, EXERCISE_TYPE, LOCATION, REPORT_TIME, USER_ID) VALUES\000d\000a(1, 30, 'Running', 'outside', '2025-02-15T08:00:00Z', 1),  -- Day 1\000d\000a(2, 45, 'Cycling', 'inside', '2025-02-14T08:00:00Z', 1),  -- Day 2\000d\000a(3, 60, 'Yoga', 'inside', '2025-02-13T08:00:00Z', 1),     -- Day 3\000d\000a(4, 40, 'Running', 'outside', '2025-02-12T08:00:00Z', 1),  -- Day 4\000d\000a(5, 50, 'Walking', 'outside', '2025-02-11T08:00:00Z', 1),  -- Day 5\000d\000a(6, 30, 'Cycling', 'inside', '2025-02-10T08:00:00Z', 1),  -- Day 6\000d\000a(7, 60, 'Yoga', 'inside', '2025-02-09T08:00:00Z', 1),     -- Day 7\000d\000a(8, 45, 'Running', 'outside', '2025-02-08T08:00:00Z', 1),  -- Day 8\000d\000a(9, 50, 'Cycling', 'outside', '2025-02-07T08:00:00Z', 1),  -- Day 9\000d\000a(10, 35, 'Walking', 'inside', '2025-02-06T08:00:00Z', 1),  -- Day 10\000d\000a(11, 40, 'Running', 'outside', '2025-02-05T08:00:00Z', 1), -- Day 11\000d\000a(12, 55, 'Yoga', 'inside', '2025-02-04T08:00:00Z', 1),    -- Day 12\000d\000a(13, 30, 'Cycling', 'outside', '2025-02-03T08:00:00Z', 1), -- Day 13\000d\000a(14, 45, 'Walking', 'inside', '2025-02-02T08:00:00Z', 1)"; expected "INSERT"; SQL statement:
+ININSERT INTO exercise_data (ID, DURATION, EXERCISE_TYPE, LOCATION, REPORT_TIME, USER_ID) VALUES
+(1, 30, 'Running', 'outside', '2025-02-15T08:00:00Z', 1),  -- Day 1
+(2, 45, 'Cycling', 'inside', '2025-02-14T08:00:00Z', 1),  -- Day 2
+(3, 60, 'Yoga', 'inside', '2025-02-13T08:00:00Z', 1),     -- Day 3
+(4, 40, 'Running', 'outside', '2025-02-12T08:00:00Z', 1),  -- Day 4
+(5, 50, 'Walking', 'outside', '2025-02-11T08:00:00Z', 1),  -- Day 5
+(6, 30, 'Cycling', 'inside', '2025-02-10T08:00:00Z', 1),  -- Day 6
+(7, 60, 'Yoga', 'inside', '2025-02-09T08:00:00Z', 1),     -- Day 7
+(8, 45, 'Running', 'outside', '2025-02-08T08:00:00Z', 1),  -- Day 8
+(9, 50, 'Cycling', 'outside', '2025-02-07T08:00:00Z', 1),  -- Day 9
+(10, 35, 'Walking', 'inside', '2025-02-06T08:00:00Z', 1),  -- Day 10
+(11, 40, 'Running', 'outside', '2025-02-05T08:00:00Z', 1), -- Day 11
+(12, 55, 'Yoga', 'inside', '2025-02-04T08:00:00Z', 1),    -- Day 12
+(13, 30, 'Cycling', 'outside', '2025-02-03T08:00:00Z', 1), -- Day 13
+(14, 45, 'Walking', 'inside', '2025-02-02T08:00:00Z', 1) [42001-232]
+2025-02-17 13:46:46.106415-05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]ININSERT INTO exercise_data (ID, DURATION, EXERCISE_TYPE, LOCATION, REPORT_TIME, USER_ID) VALUES\000d\000a(1, 30, 'Running', 'outside', '2025-02-15T08:00:00Z', 1),  -- Day 1\000d\000a(2, 45, 'Cycling', 'inside', '2025-02-14T08:00:00Z', 1),  -- Day 2\000d\000a(3, 60, 'Yoga', 'inside', '2025-02-13T08:00:00Z', 1),     -- Day 3\000d\000a(4, 40, 'Running', 'outside', '2025-02-12T08:00:00Z', 1),  -- Day 4\000d\000a(5, 50, 'Walking', 'outside', '2025-02-11T08:00:00Z', 1),  -- Day 5\000d\000a(6, 30, 'Cycling', 'inside', '2025-02-10T08:00:00Z', 1),  -- Day 6\000d\000a(7, 60, 'Yoga', 'inside', '2025-02-09T08:00:00Z', 1),     -- Day 7\000d\000a(8, 45, 'Running', 'outside', '2025-02-08T08:00:00Z', 1),  -- Day 8\000d\000a(9, 50, 'Cycling', 'outside', '2025-02-07T08:00:00Z', 1),  -- Day 9\000d\000a(10, 35, 'Walking', 'inside', '2025-02-06T08:00:00Z', 1),  -- Day 10\000d\000a(11, 40, 'Running', 'outside', '2025-02-05T08:00:00Z', 1), -- Day 11\000d\000a(12, 55, 'Yoga', 'inside', '2025-02-04T08:00:00Z', 1),    -- Day 12\000d\000a(13, 30, 'Cycling', 'outside', '2025-02-03T08:00:00Z', 1), -- Day 13\000d\000a(14, 45, 'Walking', 'inside', '2025-02-02T08:00:00Z', 1)"; expected "INSERT"; SQL statement:
+ININSERT INTO exercise_data (ID, DURATION, EXERCISE_TYPE, LOCATION, REPORT_TIME, USER_ID) VALUES
+(1, 30, 'Running', 'outside', '2025-02-15T08:00:00Z', 1),  -- Day 1
+(2, 45, 'Cycling', 'inside', '2025-02-14T08:00:00Z', 1),  -- Day 2
+(3, 60, 'Yoga', 'inside', '2025-02-13T08:00:00Z', 1),     -- Day 3
+(4, 40, 'Running', 'outside', '2025-02-12T08:00:00Z', 1),  -- Day 4
+(5, 50, 'Walking', 'outside', '2025-02-11T08:00:00Z', 1),  -- Day 5
+(6, 30, 'Cycling', 'inside', '2025-02-10T08:00:00Z', 1),  -- Day 6
+(7, 60, 'Yoga', 'inside', '2025-02-09T08:00:00Z', 1),     -- Day 7
+(8, 45, 'Running', 'outside', '2025-02-08T08:00:00Z', 1),  -- Day 8
+(9, 50, 'Cycling', 'outside', '2025-02-07T08:00:00Z', 1),  -- Day 9
+(10, 35, 'Walking', 'inside', '2025-02-06T08:00:00Z', 1),  -- Day 10
+(11, 40, 'Running', 'outside', '2025-02-05T08:00:00Z', 1), -- Day 11
+(12, 55, 'Yoga', 'inside', '2025-02-04T08:00:00Z', 1),    -- Day 12
+(13, 30, 'Cycling', 'outside', '2025-02-03T08:00:00Z', 1), -- Day 13
+(14, 45, 'Walking', 'inside', '2025-02-02T08:00:00Z', 1) [42001-232]
+2025-02-17 13:47:04.005294-05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EXERCISE_DATA" not found; SQL statement:
+INSERT INTO exercise_data (ID, DURATION, EXERCISE_TYPE, LOCATION, REPORT_TIME, USER_ID) VALUES
+(1, 30, 'Running', 'outside', '2025-02-15T08:00:00Z', 1),  -- Day 1
+(2, 45, 'Cycling', 'inside', '2025-02-14T08:00:00Z', 1),  -- Day 2
+(3, 60, 'Yoga', 'inside', '2025-02-13T08:00:00Z', 1),     -- Day 3
+(4, 40, 'Running', 'outside', '2025-02-12T08:00:00Z', 1),  -- Day 4
+(5, 50, 'Walking', 'outside', '2025-02-11T08:00:00Z', 1),  -- Day 5
+(6, 30, 'Cycling', 'inside', '2025-02-10T08:00:00Z', 1),  -- Day 6
+(7, 60, 'Yoga', 'inside', '2025-02-09T08:00:00Z', 1),     -- Day 7
+(8, 45, 'Running', 'outside', '2025-02-08T08:00:00Z', 1),  -- Day 8
+(9, 50, 'Cycling', 'outside', '2025-02-07T08:00:00Z', 1),  -- Day 9
+(10, 35, 'Walking', 'inside', '2025-02-06T08:00:00Z', 1),  -- Day 10
+(11, 40, 'Running', 'outside', '2025-02-05T08:00:00Z', 1), -- Day 11
+(12, 55, 'Yoga', 'inside', '2025-02-04T08:00:00Z', 1),    -- Day 12
+(13, 30, 'Cycling', 'outside', '2025-02-03T08:00:00Z', 1), -- Day 13
+(14, 45, 'Walking', 'inside', '2025-02-02T08:00:00Z', 1) [42102-232]
+2025-02-17 13:48:15.303736-05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EXERCISE_DATA" not found; SQL statement:
+INSERT INTO exercise_data (ID, DURATION, EXERCISE_TYPE, LOCATION, REPORT_TIME, USER_ID) VALUES
+(1, 30, 'Running', 'outside', '2025-02-15T08:00:00Z', 1),  -- Day 1
+(2, 45, 'Cycling', 'inside', '2025-02-14T08:00:00Z', 1),  -- Day 2
+(3, 60, 'Yoga', 'inside', '2025-02-13T08:00:00Z', 1),     -- Day 3
+(4, 40, 'Running', 'outside', '2025-02-12T08:00:00Z', 1),  -- Day 4
+(5, 50, 'Walking', 'outside', '2025-02-11T08:00:00Z', 1),  -- Day 5
+(6, 30, 'Cycling', 'inside', '2025-02-10T08:00:00Z', 1),  -- Day 6
+(7, 60, 'Yoga', 'inside', '2025-02-09T08:00:00Z', 1),     -- Day 7
+(8, 45, 'Running', 'outside', '2025-02-08T08:00:00Z', 1),  -- Day 8
+(9, 50, 'Cycling', 'outside', '2025-02-07T08:00:00Z', 1),  -- Day 9
+(10, 35, 'Walking', 'inside', '2025-02-06T08:00:00Z', 1),  -- Day 10
+(11, 40, 'Running', 'outside', '2025-02-05T08:00:00Z', 1), -- Day 11
+(12, 55, 'Yoga', 'inside', '2025-02-04T08:00:00Z', 1),    -- Day 12
+(13, 30, 'Cycling', 'outside', '2025-02-03T08:00:00Z', 1), -- Day 13
+(14, 45, 'Walking', 'inside', '2025-02-02T08:00:00Z', 1) [42102-232]
+2025-02-17 13:48:17.484240-05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EXERCISE_DATA" not found; SQL statement:
+INSERT INTO exercise_data (ID, DURATION, EXERCISE_TYPE, LOCATION, REPORT_TIME, USER_ID) VALUES
+(1, 30, 'Running', 'outside', '2025-02-15T08:00:00Z', 1),  -- Day 1
+(2, 45, 'Cycling', 'inside', '2025-02-14T08:00:00Z', 1),  -- Day 2
+(3, 60, 'Yoga', 'inside', '2025-02-13T08:00:00Z', 1),     -- Day 3
+(4, 40, 'Running', 'outside', '2025-02-12T08:00:00Z', 1),  -- Day 4
+(5, 50, 'Walking', 'outside', '2025-02-11T08:00:00Z', 1),  -- Day 5
+(6, 30, 'Cycling', 'inside', '2025-02-10T08:00:00Z', 1),  -- Day 6
+(7, 60, 'Yoga', 'inside', '2025-02-09T08:00:00Z', 1),     -- Day 7
+(8, 45, 'Running', 'outside', '2025-02-08T08:00:00Z', 1),  -- Day 8
+(9, 50, 'Cycling', 'outside', '2025-02-07T08:00:00Z', 1),  -- Day 9
+(10, 35, 'Walking', 'inside', '2025-02-06T08:00:00Z', 1),  -- Day 10
+(11, 40, 'Running', 'outside', '2025-02-05T08:00:00Z', 1), -- Day 11
+(12, 55, 'Yoga', 'inside', '2025-02-04T08:00:00Z', 1),    -- Day 12
+(13, 30, 'Cycling', 'outside', '2025-02-03T08:00:00Z', 1), -- Day 13
+(14, 45, 'Walking', 'inside', '2025-02-02T08:00:00Z', 1) [42102-232]
+2025-02-17 13:50:20.630276-05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]Referential integrity constraint violation: ""FK7MOTDTBUQLKSH921J4IYP6JAQ: PUBLIC.EXERCISE_REPORTS FOREIGN KEY(USER_ID) REFERENCES PUBLIC.USERS(ID) (CAST(1 AS BIGINT))"""; expected "ROLLBACK, REVOKE, RUNSCRIPT, RELEASE, REFRESH"; SQL statement:
+Referential integrity constraint violation: "FK7MOTDTBUQLKSH921J4IYP6JAQ: PUBLIC.EXERCISE_REPORTS FOREIGN KEY(USER_ID) REFERENCES PUBLIC.USERS(ID) (CAST(1 AS BIGINT))" [42001-232]
+2025-02-17 13:50:20.631479-05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]SQL statement:\000d\000aINSERT INTO EXERCISE_REPORTS (ID, DURATION, EXERCISE_TYPE, LOCATION, REPORT_TIME, USER_ID) VALUES\000d\000a(1, 30, 'Running', 'outside', '2025-02-15T08:00:00Z', 1),  -- Day 1\000d\000a(2, 45, 'Cycling', 'inside', '2025-02-14T08:00:00Z', 1),  -- Day 2\000d\000a(3, 60, 'Yoga', 'inside', '2025-02-13T08:00:00Z', 1),     -- Day 3\000d\000a(4, 40, 'Running', 'outside', '2025-02-12T08:00:00Z', 1),  -- Day 4\000d\000a(5, 50, 'Walking', 'outside', '2025-02-11T08:00:00Z', 1),  -- Day 5\000d\000a(6, 30, 'Cycling', 'inside', '2025-02-10T08:00:00Z', 1),  -- Day 6\000d\000a(7, 60, 'Yoga', 'inside', '2025-02-09T08:00:00Z', 1),     -- Day 7\000d\000a(8, 45, 'Running', 'outside', '2025-02-08T08:00:00Z', 1),  -- Day 8\000d\000a(9, 50, 'Cycling', 'outside', '2025-02-07T08:00:00Z', 1),  -- Day 9\000d\000a(10, 35, 'Walking', 'inside', '2025-02-06T08:00:00Z', 1),  -- Day 10\000d\000a(11, 40, 'Running', 'outside', '2025-02-05T08:00:00Z', 1), -- Day 11\000d\000a(12, 55, 'Yoga', 'inside', '2025-02-04T08:00:00Z', 1),    -- Day 12\000d\000a(13, 30, 'Cycling', 'outside', '2025-02-03T08:00:00Z', 1), -- Day 13\000d\000a(14, 45, 'Walking', 'inside', '2025-02-02T08:00:00Z', 1) [23506-232] 23506/23506 (Help)"; expected "SAVEPOINT, SCRIPT, SHUTDOWN"; SQL statement:
+SQL statement:
+INSERT INTO EXERCISE_REPORTS (ID, DURATION, EXERCISE_TYPE, LOCATION, REPORT_TIME, USER_ID) VALUES
+(1, 30, 'Running', 'outside', '2025-02-15T08:00:00Z', 1),  -- Day 1
+(2, 45, 'Cycling', 'inside', '2025-02-14T08:00:00Z', 1),  -- Day 2
+(3, 60, 'Yoga', 'inside', '2025-02-13T08:00:00Z', 1),     -- Day 3
+(4, 40, 'Running', 'outside', '2025-02-12T08:00:00Z', 1),  -- Day 4
+(5, 50, 'Walking', 'outside', '2025-02-11T08:00:00Z', 1),  -- Day 5
+(6, 30, 'Cycling', 'inside', '2025-02-10T08:00:00Z', 1),  -- Day 6
+(7, 60, 'Yoga', 'inside', '2025-02-09T08:00:00Z', 1),     -- Day 7
+(8, 45, 'Running', 'outside', '2025-02-08T08:00:00Z', 1),  -- Day 8
+(9, 50, 'Cycling', 'outside', '2025-02-07T08:00:00Z', 1),  -- Day 9
+(10, 35, 'Walking', 'inside', '2025-02-06T08:00:00Z', 1),  -- Day 10
+(11, 40, 'Running', 'outside', '2025-02-05T08:00:00Z', 1), -- Day 11
+(12, 55, 'Yoga', 'inside', '2025-02-04T08:00:00Z', 1),    -- Day 12
+(13, 30, 'Cycling', 'outside', '2025-02-03T08:00:00Z', 1), -- Day 13
+(14, 45, 'Walking', 'inside', '2025-02-02T08:00:00Z', 1) [23506-232] 23506/23506 (Help) [42001-232]
+2025-02-17 14:05:31.587631-05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "-- Day 14\000d\000a\000d\000a-- David Lee (ID 4) - Updated 4 days ago\000d\000a([*]43, 30, 'Running', 'outside', '2025-02-13T07:20:00Z', 4),  -- Day 1\000d\000a(44, 45, 'Cycling', 'inside', '2025-02-12T08:00:00Z', 4),  -- Day 2\000d\000a(45, 60, 'Yoga', 'inside', '2025-02-11T08:00:00Z', 4),     -- Day 3\000d\000a(46, 40, 'Running', 'outside', '2025-02-10T08:00:00Z', 4),  -- Day 4\000d\000a(47, 50, 'Walking', 'outside', '2025-02-09T08:00:00Z', 4),  -- Day 5\000d\000a(48, 30, 'Cycling', 'inside', '2025-02-08T08:00:00Z', 4),  -- Day 6\000d\000a(49, 60, 'Yoga', 'inside', '2025-02-07T08:00:00Z', 4),     -- Day 7\000d\000a(50, 45, 'Running', 'outside', '2025-02-06T08:00:00Z', 4),  -- Day 8\000d\000a(51, 50, 'Cycling', 'outside', '2025-02-05T08:00:00Z', 4),  -- Day 9\000d\000a(52, 35, 'Walking', 'inside', '2025-02-04T08:00:00Z', 4),   -- Day 10\000d\000a(53, 40, 'Running', 'outside', '2025-02-03T08:00:00Z', 4),  -- Day 11\000d\000a(54, 55, 'Yoga', 'inside', '2025-02-02T08:00:00Z', 4),     -- Day 12\000d\000a(55, 30, 'Cycling', 'outside', '2025-02-01T08:00:00Z', 4),  -- Day 13\000d\000a(56, 45, 'Walking', 'inside', '2025-01-31T08:00:00Z', 4)"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+-- Day 14
+
+-- David Lee (ID 4) - Updated 4 days ago
+(43, 30, 'Running', 'outside', '2025-02-13T07:20:00Z', 4),  -- Day 1
+(44, 45, 'Cycling', 'inside', '2025-02-12T08:00:00Z', 4),  -- Day 2
+(45, 60, 'Yoga', 'inside', '2025-02-11T08:00:00Z', 4),     -- Day 3
+(46, 40, 'Running', 'outside', '2025-02-10T08:00:00Z', 4),  -- Day 4
+(47, 50, 'Walking', 'outside', '2025-02-09T08:00:00Z', 4),  -- Day 5
+(48, 30, 'Cycling', 'inside', '2025-02-08T08:00:00Z', 4),  -- Day 6
+(49, 60, 'Yoga', 'inside', '2025-02-07T08:00:00Z', 4),     -- Day 7
+(50, 45, 'Running', 'outside', '2025-02-06T08:00:00Z', 4),  -- Day 8
+(51, 50, 'Cycling', 'outside', '2025-02-05T08:00:00Z', 4),  -- Day 9
+(52, 35, 'Walking', 'inside', '2025-02-04T08:00:00Z', 4),   -- Day 10
+(53, 40, 'Running', 'outside', '2025-02-03T08:00:00Z', 4),  -- Day 11
+(54, 55, 'Yoga', 'inside', '2025-02-02T08:00:00Z', 4),     -- Day 12
+(55, 30, 'Cycling', 'outside', '2025-02-01T08:00:00Z', 4),  -- Day 13
+(56, 45, 'Walking', 'inside', '2025-01-31T08:00:00Z', 4) [42001-232]

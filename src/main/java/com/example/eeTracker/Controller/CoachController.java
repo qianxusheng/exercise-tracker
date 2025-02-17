@@ -27,14 +27,12 @@ public class CoachController {
     @Autowired
     private UserService userService;
 
-    // API to create a new coach
     @PostMapping("/register")
     public ResponseEntity<Coach> registerCoach(@RequestBody Coach coach) {
         Coach savedCoach = coachService.saveCoach(coach);
         return ResponseEntity.ok(savedCoach);
     }
 
-    // API to login a coach (simple example, you might want to use JWT for real authentication)
     @PostMapping("/login")
     public ResponseEntity<String> loginCoach(@RequestBody Coach loginRequest) {
         Coach coach = coachService.getCoachByUsername(loginRequest.getUsername());
