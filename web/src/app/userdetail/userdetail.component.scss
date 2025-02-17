@@ -1,0 +1,100 @@
+.report-container {
+    width: 80%;
+    margin: 20px auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .report-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .report-table th, .report-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .report-table th {
+    background: #007bff;
+    color: white;
+  }
+  
+  .report-table tr:nth-child(even) {
+    background: #f2f2f2;
+  }
+  
+  .report-table tr:hover {
+    background: #d6e4ff;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    gap: 15px;
+  }
+  
+  .pagination button {
+    padding: 8px 15px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .pagination button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .pagination span {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .no-data {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    margin-top: 20px;
+  }
+  
+  .report-container button {
+    background: linear-gradient(45deg, #4CAF50, #81C784); /* 渐变背景 */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px; 
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .report-container button:hover {
+    background: linear-gradient(45deg, #81C784, #4CAF50); 
+    transform: scale(1.05); 
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .report-container button:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 4px rgba(0, 123, 255, 0.5); 
+  }
+  
+  .report-container button:active {
+    transform: scale(0.98); 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }

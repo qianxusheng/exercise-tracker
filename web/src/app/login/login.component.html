@@ -1,0 +1,64 @@
+<!-- login.component.html -->
+<div class="login-container" *ngIf="!isAuthenticated">
+    <h2>{{ isRegistering ? 'Register' : 'Login' }} to eeTracker Coach</h2>
+  
+    <!-- Login Form -->
+    <form *ngIf="!isRegistering" (ngSubmit)="onSubmitLogin()" #loginForm="ngForm">
+      <div>
+        <label for="username">Username</label>
+        <input 
+          type="text" 
+          id="username" 
+          name="username" 
+          [(ngModel)]="loginData.username" 
+          required 
+        />
+      </div>
+  
+      <div>
+        <label for="password">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          [(ngModel)]="loginData.password" 
+          required 
+        />
+      </div>
+  
+      <button type="submit" [disabled]="!loginForm.valid">Login</button>
+    </form>
+  
+    <!-- Register Form -->
+    <form *ngIf="isRegistering" (ngSubmit)="onSubmitRegister()" #registerForm="ngForm">
+      <div>
+        <label for="newUsername">Username</label>
+        <input 
+          type="text" 
+          id="newUsername" 
+          name="newUsername" 
+          [(ngModel)]="registerData.username" 
+          required 
+        />
+      </div>
+  
+      <div>
+        <label for="newPassword">Password</label>
+        <input 
+          type="password" 
+          id="newPassword" 
+          name="newPassword" 
+          [(ngModel)]="registerData.password" 
+          required 
+        />
+      </div>
+  
+      <button type="submit" [disabled]="!registerForm.valid">Register</button>
+    </form>
+  
+    <div class="links">
+      <p *ngIf="!isRegistering">Don't have an account? <a (click)="toggleForm()" class="register-link">Register here</a></p>
+      <p *ngIf="isRegistering">Already have an account? <a (click)="toggleForm()" class="login-link">Login here</a></p>
+    </div>
+  </div>
+  

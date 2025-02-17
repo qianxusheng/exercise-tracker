@@ -1,0 +1,114 @@
+/* General Container */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Toolbar */
+  .toolbar {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .toolbar h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Toggle Links (Login / Register) */
+  .form-toggle-links {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .toggle-link {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .toggle-link:hover {
+    color: #0056b3;
+  }
+  
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+form div label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px; 
+}
+
+form div input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%; 
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+  /* Links Section */
+.links p {
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.register-link, .login-link {
+  font-size: 16px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.register-link {
+  color: #007bff;  /* Blue color for Register */
+}
+
+.register-link:hover {
+  color: #0056b3;  /* Darker blue on hover */
+}
+
+.login-link {
+  color: #28a745;  /* Green color for Login */
+}
+
+.login-link:hover {
+  color: #218838;  /* Darker green on hover */
+}

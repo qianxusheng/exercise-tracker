@@ -1,0 +1,35 @@
+<div *ngIf="exerciseReports.length > 0; else noReports" class="report-container">
+  <button (click)="fetchLastSevenDaysReports()">
+    {{ showLast7Days ? 'Show All Reports' : 'Show Last 7 Days Reports' }}
+  </button>  
+  <table class="report-table">
+    <thead>
+      <tr>
+        <th>Date & Time</th>
+        <th>Exercise Type</th>
+        <th>Duration</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let report of paginatedReports()">
+        <td>{{ report.reportTime.format('YYYY-MM-DD HH:mm:ss') }}</td>
+        <td>{{ report.exerciseType }}</td>
+        <td>{{ report.duration }} mins</td>
+        <td>{{ report.location }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pagination">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="currentPage >= totalPages">Next</button>
+  </div>
+  
+  <button (click)="goToDashboard()" class="return-dashboard-btn">Back to Dashboard</button>
+</div>
+
+<ng-template #noReports>
+  <p class="no-data">No exercise reports found.</p>
+</ng-template>
