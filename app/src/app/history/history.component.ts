@@ -51,12 +51,20 @@ export class HistoryComponent implements OnInit {
       this.http.get<any[]>(`${this.apiUrl}/${this.userId}`).subscribe(
         (data) => {
           console.log('Fetched exercise history:', data);
-          this.exerciseReports = data; // Store fetched data in exerciseReports
+          
+          // Sort and map the data, using Moment.js for date conversion
+          this.exerciseReports = data
+            .map(report => ({
+              ...report,
+              // Convert report time to the selected timezone using Moment.js
+              reportTime: moment.tz(report.reportTime, this.timezone),
+            }))
+            .sort((a, b) => b.reportTime.valueOf() - a.reportTime.valueOf()); // Sort by reportTime in descending order
         },
         (error) => {
           console.error('Error fetching exercise history:', error);
         }
       );
     }
-  }
+  } 
 }
