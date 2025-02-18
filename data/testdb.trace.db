@@ -305,3 +305,6 @@ org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "-- Day 1
 (54, 55, 'Yoga', 'inside', '2025-02-02T08:00:00Z', 4),     -- Day 12
 (55, 30, 'Cycling', 'outside', '2025-02-01T08:00:00Z', 4),  -- Day 13
 (56, 45, 'Walking', 'inside', '2025-01-31T08:00:00Z', 4) [42001-232]
+2025-02-18 10:52:04.278409-05:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EXERCISE" not found; SQL statement:
+DELETE FROM exercise WHERE id IN (144, 145, 146, 147, 148) [42102-232]
