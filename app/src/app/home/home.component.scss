@@ -1,0 +1,42 @@
+.home-container {
+    padding: 16px;
+    padding-bottom: 100px;
+  }
+  
+  ion-card {
+    margin-top: 20px;
+  }
+  
+  ion-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+  
+  td {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  ion-button {
+    margin-top: 8px;
+  }
+  
+  ion-footer {
+    position: sticky;
+    bottom: 0;
+    z-index: 10; 
+  }
+
+  ion-input {
+    --padding-start: 40px; /* Adds padding inside the input */
+    --padding-end: 10px; /* Adds padding inside the input */
+    width: 100%;
+  }

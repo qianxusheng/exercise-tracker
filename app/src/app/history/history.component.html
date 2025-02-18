@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Exercise History</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="history-container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Past 7 Days Exercise Reports</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <!-- Exercise Reports List -->
+        <ion-list>
+          <ion-item *ngFor="let report of exerciseReports">
+            <ion-label>
+              <h2>{{ report.exerciseType }}</h2>
+              <p><strong>Duration:</strong> {{ report.duration }} minutes</p>
+              <p><strong>Date:</strong> {{ convertReportTime(report.reportTime) }}</p>
+              <p><strong>Location:</strong> {{ report.location }}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+
+        <!-- If no reports available -->
+        <ion-item *ngIf="exerciseReports.length === 0">
+          <ion-label>No exercise reports available for the past 7 days.</ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+<ion-footer class="fixed-footer">
+  <ion-toolbar>
+      <ion-button (click)="goHome()" expand="full" color="primary">
+        Back to Home
+      </ion-button>
+  </ion-toolbar>
+</ion-footer>

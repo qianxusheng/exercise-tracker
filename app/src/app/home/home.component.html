@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-label>Hello, {{ username }}</ion-label>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-select [(ngModel)]="selectedTimezone" interface="popover" placeholder="Select Timezone">
+        <ion-select-option *ngFor="let timezone of timezones" [value]="timezone">
+          {{ timezone }}
+        </ion-select-option>
+      </ion-select>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="home-container">
+
+  <!-- Exercise Report Form -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Exercise Report</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <!-- Exercise Type Selection -->
+      <ion-item>
+        <ion-label>Exercise Type <span style="color: red;">*</span></ion-label>
+        <ion-select [(ngModel)]="exerciseType" placeholder="Select Exercise Type">
+          <!-- Predefined Exercise Types -->
+          <ion-select-option value="Running">Running</ion-select-option>
+          <ion-select-option value="Cycling">Cycling</ion-select-option>
+          <ion-select-option value="Swimming">Swimming</ion-select-option>
+          <ion-select-option value="Yoga">Yoga</ion-select-option>
+          <ion-select-option value="Weight Training">Weight Training</ion-select-option>
+          <!-- Option to enter custom type -->
+          <ion-select-option value="Custom">Custom</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- Custom Exercise Type Input (visible when 'Custom' is selected) -->
+      <ion-item *ngIf="exerciseType === 'Custom'">
+        <ion-input [(ngModel)]="customExerciseType" placeholder="Enter your custom exercise"></ion-input>
+      </ion-item>
+
+      <!-- Duration Input -->
+      <ion-item>
+        <ion-label position="floating">Duration (minutes) <span style="color: red;">*</span></ion-label>
+        <ion-input [(ngModel)]="duration" type="number" placeholder="Enter duration" style="text-align: right;"></ion-input>
+      </ion-item>
+
+      <!-- Date Input -->
+      <ion-item>
+        <ion-label>Date<span style="color: red;">*</span></ion-label>
+        <ion-input [(ngModel)]="reportTime" type="datetime-local" placeholder="Select date and time"></ion-input>
+      </ion-item>
+
+      <!-- Location Input -->
+      <ion-item>
+        <ion-label>Location <span style="color: red;">*</span> </ion-label>
+        <ion-select [(ngModel)]="location" placeholder="Select location">
+          <ion-select-option value="inside">Inside</ion-select-option>
+          <ion-select-option value="outside">Outside</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- Add Report Button -->
+      <ion-button expand="full" (click)="addExerciseReport()">Add Report</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Display Exercise Reports Table -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Today Exercise Reports</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let report of exerciseReports; let i = index">
+          <ion-label>
+            <h2>{{ report.EXERCISE_TYPE }}</h2>
+            <p>Duration: {{ report.DURATION }} minutes</p>
+            <p>Date: {{ report.REPORT_TIME }}</p>
+            <p>Location: {{ report.LOCATION }}</p>
+          </ion-label>
+
+          <!-- Edit Button -->
+          <ion-button slot="end" (click)="editReport(report, i)">Edit</ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card> 
+  </div>
+</ion-content>
+
+<!-- View History Button -->
+<ion-footer>
+  <ion-item lines="none" (click)="viewHistory()" style="cursor: pointer;">
+    <ion-label style="text-align: center; width: 100%; text-decoration: underline;">View Exercise History</ion-label>
+  </ion-item>
+</ion-footer>
+
+ 
