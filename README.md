@@ -1,15 +1,17 @@
-# Problem you will solve
-In this interview, we will discuss the implementation of a self-management exercise tracker that helps individuals with chronic conditions and disabilities engaged with daily exercise, monitored by health coaches.
+# Exercise Tracker System
+
+## Project Overview
+This project implements a self-management exercise tracker to help individuals with chronic conditions and disabilities stay engaged with daily exercise, with monitoring support from health coaches.
 
 The system consists of three main components:
-- a **Mobile Health app** that allows individuals (primary users) to record the type of exercise, the duration, and location over a day. 
+- a **Mobile Health app** that allows individuals (primary users) to record the type of exercise, the duration, and location over a day.
 - a **RESTful backend** that is connected to a **database**. This backend sends, receives and stores the data for all individuals (users).
 - a **Web Portal** for health coaches. This portal displays reports and analysis of the exercise records collected from the app for a group of individuals with chronic conditions and disabilities.
 
-A diagram of the system can be seen here:
+System architecture diagram:
 ![enter image description here](https://i.ibb.co/1bQxLDZ/architecture.png)
 
-We will explain what features you need to implement and what technology you need to use for each component in the following sections.
+The following sections detail the features and technology stack for each component.
 
 # System Components
 
@@ -36,11 +38,10 @@ The app captures the occurence of daily exercises. Since there are "a group of" 
     - Create an advanced past seven day report (be creative)
 
 ### Technique
-You should use the following hybrid mobile frameworks to finish the mobile app part:
-- Angular + Ionic + Capacitor (latest stable version recommended)
-- If you are an expert in another hybrid programming framework, please discuss with Leon (hah90@pitt)
+The mobile app uses the following hybrid mobile framework:
+- Angular + Ionic + Capacitor (latest stable version)
 
-**How to Demo:** You will playthe app as **one user**. A real device demo is recommended yet simulator/web browser demo is acceptable. Just use the device you have on hand and don't purchase any new device specifically for this interview.
+**Demo Setup:** The app will be tested as **one user**. Can be demonstrated on a real device, simulator, or web browser.
 ________
 ## RESTful Backend (server + database)
 The **RESTful Backend** will collect the exercise reports from app users and serve these data for the **app** and the **web portal**.  More details is shown below.
@@ -63,23 +64,21 @@ The **RESTful Backend** will collect the exercise reports from app users and ser
     - password
 
 
-### Technique 
-To implement **RESTful Backend**,  you should use the following framework:
+### Technique
+**RESTful Backend** implementation:
 *  Spring Boot + Spring MVC + Spring data JPA
 
-To implement **Database**, you can choose one of the following databases:
+**Database** options:
 * MySQL
 * PostgreSQL
 
-If you are an expert in another framework, please discuss with Leon (hah90@pitt)
 
-
-**HINTS**
-- to let your mobile app to use your backend
-  - if you are running the app on devices, you might need to deploy your backend to a cloud, a server or use native feature (e.g., iPhone + Safari). Here is a tutorial for you to deploy a Spring MVC backend to [heroku](https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku) or [ngrock](https://ngrok.com/docs/getting-started/). Please avoid using any service with charge, we may not have budget to reimburse you for any deployment cost.
-  - if you are running the app on simulators, you can use native feature (e.g., iPhone + Safari) or localhost.
-  - If you could not complete all the tasks and will use the browser to demo, just run the localhost backend.
-- You can use [postman](https://www.getpostman.com/)  to test your **RESTful Backend** when you haven't finish your frontend.
+**Implementation Notes**
+- Mobile app to backend connection:
+  - For device deployment: backend can be deployed to cloud, server, or use native features (e.g., iPhone + Safari). Options include [heroku](https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku) or [ngrock](https://ngrok.com/docs/getting-started/).
+  - For simulator deployment: use native features (e.g., iPhone + Safari) or localhost.
+  - For browser demo: localhost backend is sufficient.
+- Use [postman](https://www.getpostman.com/) to test the **RESTful Backend** independently.
 _____
 ## Web Portal
 ### Feature
@@ -96,21 +95,13 @@ _____
     - Following the design of the past seven days' report on the app side, duplicate the past seven days' report on the portal, but be more compatible with the larger browser screens. Also, be creative to design something different from the app, taking into account the different users: app - individuals with chronic conditions and disabilities vs. portal - health coaches
 
 #### Technique
-The **web portal** should be implement in Angular 2+ (latest stable version recommended). For page navigation between login page, app user list page and single app user detail page, you need to use [Angular Router](https://angular.dev/guide/routing/common-router-tasks)) to implement. 
-If you are an expert in another programming framework, please discuss with Leon (hah90@pitt)
+The **web portal** is implemented in Angular 2+ (latest stable version). Page navigation between login page, app user list page and app user detail page uses [Angular Router](https://angular.dev/guide/routing/common-router-tasks).
 
-**How to Demo** 
-Show the development web portal in browser on your computer. No need to deploy on a server.
+**Demo Setup**
+The web portal runs in development mode on browser. No server deployment needed.
 
-**HINTS**
-- Besides the core features that require your creative skills, other fancy, well-designed user interfaces are not required.
+**Notes**
+- Focus on core features and functionality. Advanced UI design is optional.
 
 # Data size for Demo
 To effectively demonstrate your system, particularly the dashboard and backend, it is necessary to create a dashboard list with a minimum of 10 app users, although only simulating one app user on the app side. Additionally, for each app user, 14 days of the exercise records should be generated. It is important to include more than 2 days of missing reports for certain app users in order to showcase the alert feature. Therefore, in the backend, a minimum of 280 records in total for 10 app users over the past 14 days should be saved.
-
-#  Rules
-- Focus on implementing the system as much as possible. If you are short on time, prioritize the app, backend, and portal in that order. It is not recommended to partially develop all components without fully implementing any of them. For example, a fully functional app will receive a better grade than having partially developed components.
-- Your code will be reviewed, and you will be asked about your development process.
-- It is acceptable for your code to have defects, including bugs. If you finish the project quickly, consider how you can enhance the system and implement those improvements in your code.
-- If you have any questions, please send an email at hah90@pitt.edu.
-- This project should be completed independently. If you copy code from others or mostly use generative content from AI (proper use of copilot is allowed), you will lose the opportunity. Additionally, if you cannot explain your code, you will fail.
